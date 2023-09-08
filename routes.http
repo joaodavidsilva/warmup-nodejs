@@ -10,3 +10,18 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3333/videos
+
+###
+
+PUT http://localhost:3333/videos/71bf1d03-3192-47ba-8b43-ad53f8a5d6ed
+Content-Type: application/json
+
+{
+    "title": "Video 03",
+    "description": "This is the third video",
+    "duration": 300
+}
+
+###
+
+DELETE http://localhost:3333/videos/d8584c3d-71c7-4c90-bdbc-3ca4f3b6bfc6

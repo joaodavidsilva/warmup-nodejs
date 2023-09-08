@@ -25,11 +25,24 @@ server.post("/videos", (request, reply) => {
 });
 
 server.put("/videos/:id", (request, reply) => {
-	return "PUT videos:id";
+	const videoId = request.params.id;
+	const { title, description, duration } = request.body;
+
+	database.update(videoId, {
+		title,
+		description,
+		duration
+	});
+
+	return reply.status(204).send();
 });
 
 server.delete("/videos/:id", (request, reply) => {
-	return "DELETE videos:id";
+	const videoId = request.params.id;
+
+	database.delete(videoId);
+
+	return reply.status(204).send();
 });
 
 server.listen({
