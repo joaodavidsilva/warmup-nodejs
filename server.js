@@ -1,14 +1,5 @@
-// import { createServer } from "node:http";
-
-// const server = createServer((request, response) => {
-// 	response.write("Hello, World!");
-
-// 	response.end();
-// });
-
-// server.listen(3333);
-
 import { fastify } from "fastify";
+import { DatabaseMemory } from "./database-memory.js";
 
 const server = fastify();
 
